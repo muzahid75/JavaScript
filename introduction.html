@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="introduction">Hello JavaScript!</p>
+
+    <button type="button" onclick="document.getElementById('introduction').innerHTML=
+    'Hello World!';">Chick here to change html content</button><br><br>
+
+
+    <button type="button" onclick="document.getElementById('img_my').src='Image.jpg';">Chick here to change html attribute</button>
+
+    <img id="img_my" src="/My_Image.JPG" alt="My_Image" width="400px" height="300px">
+
+    <button type="button" onclick="document.getElementById('img_my').src='/My_Image.JPG';">Chick here to change html attribute</button>
+
+    <p id="css" style="color: burlywood;">Hello</p>
+    <button type="button" onclick="document.getElementById('css').style.color='red';">Chick here to change html attribute</button><br>
+
+    <p id="display_none" style="display: none;";">Hello</p>
+    <button type="button" onclick="document.getElementById('display_none').style.display='block';">Chick here to change html attribute</button><br>
+
+    <p id="display" style="display: block;";">Hello</p>
+    <button type="button" onclick="document.getElementById('display').style.display='none';">Chick here to change html attribute</button>
+
+</body>
+
+</html>
