@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="operator"></p>
+    <script>
+        let x = 5;
+        let y = 5;
+        console.log(x + y);//addition//arithmetic operator
+        console.log(x - y);//subtraction
+        console.log(x * y);//multiplication
+        console.log(x / y);//division
+        console.log(x ** y);//pow
+        console.log(x % y);//modulo
+        let z = x++ + ++x;// 5 + 7
+        console.log(z);//increment
+        let c = 5;
+        let b = c-- + --c;//5 + 3
+        console.log(b);// decrement
+
+        let firstName = "Muzahiudl ";//assignment operator
+        let lastName = "Islam";
+        firstName += lastName; 
+        console.log(firstName);
+
+        let m = 6;
+        let n = 6;
+        let i = "100000";
+        console.log(m+n+i);
+       /* m += n;
+        console.log(m);
+        m -= n;
+        console.log(m);
+        m *= n;
+        console.log(m);
+        m /= n;
+        console.log(m);
+        m **= n;
+        console.log(m);
+        m %= n;
+        console.log(m);
+        
+        m = m++ ;
+        console.log(m);
+        */
+
+        {
+            let a = 5;// comparison operatior
+            let b = 5;
+
+            console.log(a == b);
+            console.log(a != b);
+            console.log(a === b);
+            console.log(a !== b);
+        }
+        {
+            let a = 5;
+            let b = 6;
+
+            console.log(a < b);
+            console.log(a > b);
+            console.log(a <= b);
+            console.log(a >= b);
+        }
+
+        {
+            let c = true;// logical iperator
+            let a = 5;
+            let b = 10;
+            console.log((a<b || a>b))
+            console.log((a<b && a>b))
+            console.log(!c);
+        }
+
+        {
+            let a = 5;// ternary operator
+            let b = 6;
+            console.log((a<b? "hello":"World"))
+        }
+        {// bitwise operator
+            let a = 5;//101
+            let b = 1;//001
+            console.log(a & b);
+            console.log(a | b);
+            console.log(a ^ b);
+            console.log(~a);
+            console.log(a << b);//0101 =1010
+            console.log(a >> b);//0101 =0010
+            console.log(a >>> b);//0101 =0010
+        }
+
+    </script>
+</body>
+</html>
