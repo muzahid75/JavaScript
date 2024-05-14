@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="data_type"></p>
+    <script>
+        let x = "5" ;
+        console.log(typeof x);
+        // console.log(x.isNaN());
+
+        const y = [1,2,3,4];
+        console.log(typeof y);
+        console.log(y instanceof Array);
+
+        let z = BigInt("123334566577856576356567458684564657558");
+        console.log(z);
+
+        let obb = {name:"Muzahid", id:"20-43841-2"}
+        console.log(typeof obb);
+        console.log(obb instanceof Object);
+
+        let c = 5;
+        let d = 5;
+        console.log(c != d);
+
+        let num = 5;
+        console.log(typeof num);
+
+        const date = new Date();
+        console.log(date);
+        console.log(typeof date);
+        console.log(date instanceof Date);
+
+    </script>
+</body>
+</html>
