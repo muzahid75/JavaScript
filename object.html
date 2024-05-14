@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const obb = {
+            firstName: "Rahim",
+            lastName: "khan",
+            age: 20,
+            fullName: function () {
+                this.nickName();
+                console.log(this.firstName + " " + this.lastName);
+            },
+            nickName: function () {
+                console.log("Muzahid");
+            }
+        }
+        obb.fullName();
+        obb.nickName();
+
+    </script>
+</body>
+
+</html>
