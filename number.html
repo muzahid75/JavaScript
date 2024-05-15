@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 5;
+        let y = 5;
+        console.log(x + y);
+        {
+            let x = 5;
+            let y = 5;
+            console.log("the result is :"+" "+x + y);
+        }
+        {
+            let x = 5;
+            let y = 5;
+            console.log(x+y+" "+"is the result");
+        }
+        {
+            let x = "50";
+            let y = 5;
+            console.log(x+y);
+        }
+        {
+            let x = 500/"500";
+            // let y = 5;
+            console.log(x);
+            console.log(typeof x);
+            console.log(isNaN(x));
+        }
+        {
+            let x = NaN;
+            let y = "5";
+            console.log(x+y);
+            console.log(typeof x);
+            console.log(isNaN(x));
+        }
+        {
+            let x = -2/0;
+            // let y = "5";
+            console.log(x);
+            console.log(typeof x);
+            console.log(isNaN(x));
+        }
+        {
+            let x = BigInt(12345678998746512301);
+            console.log(x);
+            console.log(typeof x);
+        }
+        {
+            let x = Number.MAX_SAFE_INTEGER;
+            console.log(x)
+        }
+        {
+            let x = Number.MIN_SAFE_INTEGER;
+            console.log(x)
+        }
+        {
+            let x = Number.isInteger(10);
+            console.log(x)
+        }
+        {
+            let x = Number.isInteger(10.5);
+            console.log(x)
+        }
+        {
+            let x = Number.isSafeInteger(10);
+            console.log(x)
+        }
+        {
+            let x = Number.isSafeInteger(1055562247885214477522225);
+            console.log(x)
+        }
+    </script>
+</body>
+
+</html>
