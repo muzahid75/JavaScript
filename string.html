@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = "Md.Muzahidul islam Munna";
+        let len = x.length;
+        console.log(x);
+        console.log(len);
+
+        let y = new String("Md.Muzahidul islam Munna");
+
+        console.log(typeof x);
+        console.log(typeof y);
+        console.log(x == y);
+        console.log(x === y);
+
+        {
+            let x = new String("hello");
+            let y = new String("hello");
+
+            console.log(x == y);//Always return false
+
+        }
+
+        {
+            let x ="hello";
+            console.log(x.charAt(1));
+            console.log(x.charCodeAt(1));
+            console.log(x.at(1));
+            console.log(x[1]);
+        }
+
+        {
+            let x ="hello world";
+            let y = x.slice(6,11);
+            console.log(y);
+        }
+
+        {
+            let x = 'hello world munna';//slice
+            let y = x.slice(-11,-5);
+            console.log(y);
+        }
+
+        {
+            let x = 'hello world munna';//substring
+            let y = x.substring(6,11);
+            console.log(y);
+        }
+
+        {
+            let x = 'hello world munna';//substr
+            let y = x.substr(6,2);
+            console.log(y);
+        }
+
+        {
+            let x = 'hello world munna';//uppercase
+            let y = x.toUpperCase();
+            console.log(y);
+        }
+
+        {
+            let x = 'hello world munna';//lowercase
+            let y = x.toLowerCase();
+            console.log(y);
+        }
+
+        {
+            let x = 'hello';//concat
+            let y = x.concat(" ","world");
+            console.log(y);
+        }
+        {
+            let x = '    hello    ';//trim
+            let y = x.trim();
+            console.log(y);
+        }
+        {
+            let x = '5';//pad
+            let y = x.padEnd(4,"a");
+            console.log(y);
+        }
+        {
+            let x = '5';//repeat
+            let y = x.repeat(4);
+            console.log(y);
+        }
+        {
+            let x = 'HI hello world';//replace
+            let y = x.replace("HI","Muzahid");
+            console.log(y);
+        }
+        {
+            let x = 'world';//array
+            let y = x.split("");
+            console.log(y);
+        }
+        {
+            let x = 'hello w orld';//search
+            let y = x.lastIndexOf("w",10);
+            console.log(y);
+        }
+        {
+            let x = 'hello world world';//match
+            let y = x.matchAll('world');
+            console.log(Array.from(y));
+        }
+        {
+            let x = 'hello world';//includes
+            let y = x.includes('world');
+            console.log(y);
+        }
+        {
+            let x = 'hello world hi';//includes
+            let y = x.endsWith('world',11);
+            console.log(y);
+        }
+
+        {
+            let a = 5;// templete string
+            let x = `My age is : ${a} `;
+            console.log(x); 
+        }
+
+    </script>
+</body>
+</html>
