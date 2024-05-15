@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            let x = [5, 67, 32, 30, 2, 344];
+            // x.sort(function (a, b) {
+            //     return b - a;
+            // })
+            function mySort(a,b){
+                return b-a;
+            }
+            x.sort(mySort);
+            console.log(x);
+            console.log(x[0]);
+            console.log(x[x.length - 1]);
+        }
+
+        let x = [5, 3, 878, 44, 77, 1, 4];
+
+        function myFunction(arr) {
+            return Math.max.apply("null", arr);
+        }
+        console.log(myFunction(x));
+
+        {
+            let points = [5, 3, 878, 44, 77, 1, 4];
+
+            // x.sort(function(){return 0.5 - Math.random()})
+            function myFunction() {
+                points.sort(myPoints);
+                function myPoints(){
+                    return 0.5 - Math.random();
+                }
+                console.log(points);
+            }
+            myFunction();
+        }
+
+        {
+            let arr = [44,5,22,88,66,2,1];
+            let newArr = arr.findIndex(function(value,index,arr){return value> 22});
+            console.log(newArr);
+        }
+    </script>
+</body>
+
+</html>
