@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        {
+            const obb = { name: "muzahid", age: 25 };
+            let text = " ";
+            for (let x in obb) {
+                text += obb[x] + "<br>"
+            }
+            console.log(text);
+        }
+
+
+        {
+            const obb = ["muzahid", "25"];
+            let text = " ";
+            for (let x of obb) {
+                text += x + "<br>"
+            }
+            // document.getElementById('demo').innerHTML=text;
+        }
+        {
+            const obb = ["muzahid", "25"];
+            let text = " ";
+            obb.forEach(myFunction);
+            function myFunction(value) {
+                text += value + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        {
+            const arr = [1, 44, 22, 77, 44];
+            let text = "";
+            for (let i = 0; i < arr.length; i++) {
+                text += arr[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+        {
+            const arr = [1, 44, 22, 77, 44];
+            let text = "";
+            let len = arr.length;
+            let i = 0;
+            while (i > len) {
+                text += arr[i] + "<br>";
+                i++;
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+
+        const arr = [1, 44, 22, 77, 44];
+        let text = "";
+        let len = arr.length;
+        let i = 0;
+        do {
+            text += arr[i] + "<br>";
+            i++;
+        } while (i > len)
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>
