@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obb = {
+            name:"Muzahid",
+            age:25
+        }
+        let a = 'name';
+        console.log(obb.age);
+        console.log(obb['age']);
+        console.log(obb[a]);
+
+        {
+            const object = {name:"Muzahid",age:20};
+            let text ="";
+            for(let x in object){
+                text += object[x]+" ";
+            }
+            console.log(text);
+        }
+
+        {
+            const ob = {
+                firstName:"Muzahidul",
+                lastName:"islam"
+            };
+            ob.fullName = function(){
+                return this.firstName+" "+this.lastName;
+            }
+            console.log(ob.fullName());
+
+        }
+    </script>
+</body>
+</html>
