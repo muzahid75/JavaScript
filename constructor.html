@@ -17,11 +17,22 @@
         const person1=new Con("Muzahiudl","Islam");
         const person2=new Con("Monkir","Chowdhury");
 
-        console.log(person1.fullName());
-        person1.reverse = function(){
-                return this.lastName+" "+this.firstName;
-            };
-            console.log(person1.reverse());
+        // console.log(person1.fullName());
+        // person1.age=25;
+        // console.log(person1.age);
+
+        // person1.reverse = function(){
+        //         return this.lastName+" "+this.firstName;
+        //     };
+        //     console.log(person1.reverse());
+
+        Con.prototype.age=25;
+        console.log(person1.age);
+
+        Con.prototype.reverse=function(name){
+            return this.lastName+" "+this.firstName;
+        }
+        console.log(person1.reverse("Muzahid"));
     </script>
 </body>
 </html>
