@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const obb ={
+        //     firstName:"Muzahidul",
+        //     lastName:"Islam",
+
+        //     get fullName(){
+        //         return this.firstName+" "+this.lastName;
+        //     }
+        // }
+        // console.log(obb.fullName);
+        // const obb ={
+        //     firstName:"Muzahidul",
+        //     lastName:"Islam",
+        //     fullName:"",
+
+        //     set allName(name){
+        //         this.fullName=name;
+        //     }
+            
+        // }
+        // obb.allName="Muzahidul Ismal Munna Khan";
+        // console.log(obb.fullName);
+        // const obb ={
+        //     firstName:"Muzahidul",
+        //     lastName:"Islam"
+        // }
+        // Object.defineProperty(obb,"fullName",{
+        //     get :function(){
+        //         return this.firstName+" "+this.lastName;
+        //     }
+        // });
+
+        // console.log(obb.fullName);
+        const obb ={
+            firstName:"Muzahidul",
+            lastName:"Islam",
+            fullName:"",
+        }
+        Object.defineProperty(obb,"name",{
+            set :function(name){
+                this.fullName=name;
+            }
+        });
+        obb.fullName="Muzahidul islam munna khan";
+
+        console.log(obb.fullName);
+    </script>
+</body>
+</html>
