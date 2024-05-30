@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Car {
+            constructor(name) {
+                this.carName = name;
+            }
+            show() {
+                return "My Name is :" + " " + this.carName;
+            }
+        }
+
+        const Person = new Car("BMW");
+        console.log(Person.show());
+
+        {
+            class Car {
+                constructor(name) {
+                    this.carName = name;
+                }
+                static hello(x) {
+                    return "Hello " + x.carName;
+                }
+            }
+
+            const myCar = new Car("Ford");
+            console.log(Car.hello(myCar));
+        }
+
+        let object = { name: "Muzahid", age: 20 }
+        let convertion = JSON.stringify(object);
+        console.log(convertion);
+        {
+            let object = '{ "name": "Muzahid", "age": 20 }';
+            let convertion = JSON.parse(object);
+            console.log(convertion);
+        }
+
+
+    </script>
+</body>
+
+</html>
