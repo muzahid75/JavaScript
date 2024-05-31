@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addition(some) {
+            console.log(some);
+        }
+
+        function sum(num1, num2) {
+            let add = num1 + num2;
+            return add;
+        }
+        let result = sum(5, 5);
+        addition(result);
+
+        {
+            function addition(some) {
+                console.log(some);
+            }
+
+            function sum(num1, num2) {
+                let add = num1 + num2;
+                addition(add);
+            }
+            sum(5, 5);
+        }
+
+        {
+            function addition(some) {
+                console.log(some);
+            }
+
+            function sum(num1, num2,callBack) {
+                let add = num1 + num2;
+                callBack(add);
+            }
+            sum(5, 5,addition);
+        }
+    </script>
+</body>
+
+</html>
