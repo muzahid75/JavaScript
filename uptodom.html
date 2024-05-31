@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        {
+            let payment = true;
+            let mark = 70;
+            function enroll(callback) {
+                console.log("enrollment processing...");
+
+                setTimeout(function () {
+                    if (payment) {
+                        callback();
+                    } else {
+                        console.log("enrollemnt failed!");
+                    }
+                }, 2000)
+            }
+            function progress(callback) {
+                console.log("processing start...");
+
+                setTimeout(function () {
+                    if (mark >= 70) {
+                        callback();
+                    } else {
+                        console.log("Progressing failed!");
+                    }
+                }, 3000)
+            }
+            function getCertificate() {
+                console.log("enrollment processing...");
+
+                setTimeout(function () {
+                    console.log("Congress....");
+                }, 1000)
+            }
+            enroll(function () {
+                progress(getCertificate)
+            });
+        }
+
+
+        {
+            let payment = true;
+            let mark = 80;
+            function enroll() {
+                console.log("enrollment processing...");
+
+                const promise = new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        if (payment) {
+                            resolve();
+                        } else {
+                            reject("enrollemnt failed!");
+                        }
+                    }, 2000)
+                })
+                return promise;
+            }
+            function progress() {
+                console.log("processing start...");
+
+                const promise = new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        if (mark >= 80) {
+                            resolve();
+                        } else {
+                            reject("progress failed!");
+                        }
+                    }, 2000)
+                })
+                return promise;
+            }
+            function getCertificate() {
+                console.log("enrollment processing...");
+
+                const promise = new Promise(function (resolve) {
+                    setTimeout(function () {
+                        resolve("congress.....");
+                    }, 1000)
+                })
+                return promise;
+            }
+            enroll()
+                .then(progress)
+                .then(getCertificate)
+                .then(function (value) {
+                    console.log(value)
+                })
+                .catch(function (err) {
+                    console.log(err)
+                })
+        }
+
+        {
+            let payment = true;
+            let mark = 80;
+            function enroll() {
+                console.log("enrollment processing...");
+
+                const promise = new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        if (payment) {
+                            resolve();
+                        } else {
+                            reject("enrollemnt failed!");
+                        }
+                    }, 2000)
+                })
+                return promise;
+
+            }
+            function progress() {
+                console.log("processing start...");
+
+                const promise = new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        if (mark >= 80) {
+                            resolve();
+                        } else {
+                            reject("progress failed!");
+                        }
+                    }, 2000)
+                })
+                return promise;
+
+            }
+            function getCertificate() {
+                console.log("enrollment processing...");
+
+                const promise = new Promise(function (resolve) {
+                    setTimeout(function () {
+                        resolve("congress.....");
+                    }, 1000)
+                })
+                return promise;
+            }
+            async function course() {
+                try {
+                    await enroll();
+                    await progress();
+                    let massage =await getCertificate();
+                    console.log(massage);
+
+                } catch (err) {
+                    console.log(err)
+                }
+
+            }
+            course();
+        }
+    </script>
+</body>
+
+</html>
