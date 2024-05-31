@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let payment = true;
+        let mark = 80;
+        function enroll(callback) {
+            console.log("Enroll processing...")
+
+            setTimeout(function () {
+                if (payment) {
+                    callback();
+                }
+                else {
+                    console.log("Enrollment failed!");
+                }
+            },2000)
+        }
+
+        function process(callback) {
+            console.log("processing...")
+
+            setTimeout(function () {
+                if (mark>=80) {
+                    callback();
+                }
+                else {
+                    console.log("you don't have enough mark");
+                }
+            },3000)
+        }
+        function getCertificate() {
+            console.log("certificate processing")
+
+            setTimeout(function () {
+                console.log("Congress!")
+            },3000)
+        }
+
+        enroll(function(){
+            process(getCertificate);
+        })
+    </script>
+</body>
+
+</html>
