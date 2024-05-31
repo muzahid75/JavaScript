@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            function addition(value){
+                console.log(value);
+            }
+
+            function add(a,b){
+                let sum = a + b;
+                return sum;
+            }
+            let some = add(5,5);
+            // add(5,5,addition);
+            addition(some);
+        }
+        {
+            function addition(value){
+                console.log(value);
+            }
+
+            function add(a,b){
+                let sum = a + b;
+                addition(sum);
+            }
+            add(5,5);
+        }
+        {
+            function addition(value){
+                console.log(value);
+            }
+
+            function add(a,b,callback){
+                let sum = a + b;
+                callback(sum);
+            }
+            add(5,5,addition);
+        }
+        {
+            let payment = true;
+            let mark = 80;
+            function enroll(callback){
+                console.log("enrollment processing....");
+
+                setTimeout(function(){
+                    if(payment){
+                        callback();
+                    }else{
+                        console.log("payment failed!")
+                    }
+                },2000)
+            }
+
+            function process(callback){
+                console.log("processing....");
+
+                setTimeout(function(){
+                    if(mark>=80){
+                        callback();
+                    }else{
+                        console.log("Processing failed!")
+                    }
+                },3000)
+            }
+
+            function getCertificate(){
+                console.log("processing certificate....");
+
+                setTimeout(function(){
+                    console.log("congress...")
+                },1000)
+            }
+
+            enroll(function(){
+                process(getCertificate);
+            })
+        }
+    </script>
+</body>
+</html>
