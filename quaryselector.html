@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo
+        {
+            color: white;
+            background-color: black;
+            display: inline-block;
+        }
+        #demo
+        {
+            color: white;
+            background-color: black;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p class="demo">hello world!</p><br><br>
+    <p id="demo">hello world!</p>
+    <p id="test"></p>
+
+    <script>
+        const x = document.querySelectorAll("p#demo");
+        // document.getElementById("test").innerHTML= x[0].innerHTML;
+        x.innerHTML="hi";
+    </script>
+</body>
+</html>
