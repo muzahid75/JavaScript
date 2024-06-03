@@ -20,14 +20,10 @@
     </style>
 </head>
 <body>
-    <p class="demo">hello world!</p><br><br>
     <p id="demo">hello world!</p>
-    <p id="test"></p>
 
     <script>
-        const x = document.querySelectorAll("p#demo");
-        // document.getElementById("test").innerHTML= x[0].innerHTML;
-        x.innerHTML="hi";
+        document.querySelector("#demo").innerHTML="hi";
     </script>
 </body>
 </html>
