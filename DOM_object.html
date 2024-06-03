@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form id="demo" action="#" method="GET">
+        First name: <input type="text" name="fname" value="monkir"><br>
+        Last name: <input type="text" name="lname" value="chowdhury"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="a"></p>
+
+    <script>
+        const x = document.forms["demo"];
+        let text="";
+
+        for(let i=0;i<x.length;i++){
+            text +=x.elements[i].value+"<br>";
+        }
+        document.getElementById("a").innerHTML=text; -->
+
+
+    <form id="demo" action="#" onsubmit="return formValidation()" method="GET">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="return"></p>
+
+    <script>
+        function formValidation() {
+            const x = document.forms["demo"];
+            const y = x["fname"].value;
+            if (y == "") {
+                // alert("Name must be filled out");
+                document.getElementById("return").innerHTML="Name must be filled out";
+                return false;
+            }
+        }
+
+    </script>
+    </script>
+</body>
+
+</html>
