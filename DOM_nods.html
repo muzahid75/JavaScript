@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="one">hi</p>
+        <p id="two">hello</p>
+    </div>
+    <script>
+        const parents = document.createElement("p");
+        const child = document.createTextNode("Hello World!");
+        parents.appendChild(child);
+
+        const div = document.getElementById("demo");
+        const ch = document.getElementById("one");
+        
+        // div.insertBefore(parents,ch);
+        div.replaceChild(parents,ch);
+    </script>
+</body>
+</html>
